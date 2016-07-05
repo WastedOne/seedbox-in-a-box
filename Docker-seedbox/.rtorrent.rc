@@ -1,0 +1,12 @@
+directory = ~/downloads/data
+session = ~/.config/rtorrent/sessions
+schedule = watch_directory_base,5,5,"load_start=~/downloads/watch/rtorrent/*.torrent"
+port_range = 64668-64668
+port_random = no
+use_udp_trackers = yes
+encryption = allow_incoming,try_outgoing,enable_retry
+scgi_port = 127.0.0.1:2116
+check_hash = no
+encoding_list = UTF-8
+network.http.ssl_verify_peer.set = 0
+
