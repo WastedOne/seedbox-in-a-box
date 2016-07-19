@@ -1,8 +1,12 @@
 FROM fedora:23
 
+RUN dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-23.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-23.noarch.rpm
+
 RUN dnf -y upgrade && dnf -y clean all
 
 RUN dnf -y install mod_wsgi httpd redhat-rpm-config-36-1.fc23 mariadb-devel git transmission-daemon rabbitmq-server librabbitmq flac lame sox mktorrent mariadb python-devel libxml2-devel libxslt-devel gcc && dnf -y clean all
+
+ADD bashrc /etc/
 
 RUN useradd --shell /bin/bash -u 1001 -o -c "" what
 
