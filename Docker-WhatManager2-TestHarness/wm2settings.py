@@ -5,9 +5,12 @@ import djcelery
 
 djcelery.setup_loader()
 
+#---------------- EDIT THESE 
 WHAT_USER_ID = 123456
 WHAT_USERNAME = 'your what.cd username'
 WHAT_PASSWORD = 'your what.cd password'
+WHAT_ANNOUNCE = 'http://tracker.what.cd:34000/SET THIS TO YOUR ANNOUNCE/announce'
+#----------------
 
 # How frequently your profile will be stored, in seconds
 WHAT_PROFILE_SNAPSHOT_INTERVAL = 10 * 60
@@ -21,7 +24,6 @@ SYNC_SYNCS_FILES = False
 WHAT_CD_DOMAIN = 'what.cd'
 WHAT_UPLOAD_URL = 'https://{0}/upload.php'.format(WHAT_CD_DOMAIN)
 # Only for uploading
-WHAT_ANNOUNCE = 'http://tracker.what.cd:34000/SET THIS TO YOUR ANNOUNCE/announce'
 
 # Set this to something reasonable that only you know.
 TRANSMISSION_PASSWORD = '9dqQQ2WW'

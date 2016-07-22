@@ -21,11 +21,11 @@ USER what
 
 RUN git clone https://github.com/karamanolev/WhatManager2.git /home/what/WhatManager2
 
+RUN cp /home/what/WhatManager2/bibliotik/settings.example.py /home/what/WhatManager2/bibliotik/settings.py
+
+RUN cp  /home/what/WhatManager2/myanonamouse/settings.example.py /home/what/WhatManager2/myanonamouse/settings.py
+
 COPY wm2settings.py /home/what/WhatManager2/WhatManager2/settings.py
-
-COPY bib.settings.py /home/what/WhatManager2/bibliotik/settings.py
-
-COPY mam.settings.py /home/what/WhatManager2/myanonamouse/settings.py
 
 USER root
 
