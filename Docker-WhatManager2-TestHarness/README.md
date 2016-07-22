@@ -15,3 +15,16 @@ To then access the container, you can point your browser to port 8089 on the hos
 
 DO NOT USE THIS IN PRODUCTION AS NO DATASTORES EXIST.
 
+My recommended way to start this container is with:
+
+```
+sudo docker run -it --rm -p 8089:80 --name wm2test fedora-23-whatmanager2-testharness 
+```
+
+This gives you a port forward from the host port 8089 to port 80 inside the container.
+
+You can also get a shell inside the container for testing/debugging the running container  with:
+
+```
+sudo docker exec -it wm2test bash
+```
